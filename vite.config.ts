@@ -8,6 +8,7 @@ import Layouts from 'vite-plugin-vue-layouts'
 import Icons from 'unplugin-icons/vite'
 import { FileSystemIconLoader } from 'unplugin-icons/loaders'
 import IconsResolver from 'unplugin-icons/resolver'
+import WebfontDownload from 'vite-plugin-webfont-dl'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -81,5 +82,8 @@ export default defineConfig({
         ),
       },
     }),
+
+    // https://github.com/feat-agency/vite-plugin-webfont-dl
+    WebfontDownload(),
   ],
 })
