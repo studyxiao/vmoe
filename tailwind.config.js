@@ -12,6 +12,6 @@ export default {
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
     require('@tailwindcss/container-queries'),
-    require('tailwindcss-animate'),
+    // require('tailwindcss-animate'),
   ],
 }

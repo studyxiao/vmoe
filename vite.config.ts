@@ -5,6 +5,9 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
+import Icons from 'unplugin-icons/vite'
+import { FileSystemIconLoader } from 'unplugin-icons/loaders'
+import IconsResolver from 'unplugin-icons/resolver'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -47,6 +50,11 @@ export default defineConfig({
       dts: 'src/components.d.ts',
       // 在 vue 和 markdown 中获得支持
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      resolvers: [
+        IconsResolver({
+          customCollections: ['my-icons'],
+        }),
+      ],
     }),
 
     // https://github.com/hannoeru/vite-plugin-pages
@@ -61,5 +69,17 @@ export default defineConfig({
 
     // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
     Layouts(),
+
+    // https://github.com/antfu/unplugin-icons
+    Icons({
+      // 自定义图标
+      customCollections: {
+        // <i-my-icons-[name] />
+        'my-icons': FileSystemIconLoader(
+          'src/assets/icons',
+          svg => svg.replace(/^<svg /, '<svg fill="currentColor" '),
+        ),
+      },
+    }),
   ],
 })

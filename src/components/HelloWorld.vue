@@ -15,7 +15,7 @@ const mouse = useMouse({ eventFilter: debounceFilter(100) })
         <img src="/vite.svg" class="logo" alt="Vite logo">
       </a>
       <a class=" text-4xl hover:animate-spin" href="https://vuejs.org/" target="_blank">
-        <img src="/src/assets/vue.svg" class="logo vue" alt="Vue logo">
+        <img src="/src/assets/icons/vue.svg" class="logo vue" alt="Vue logo">
       </a>
       <a class=" text-4xl hover:animate-pulse" href="https://github.com/antfu/vitesse" target="_blank">
         <img v-if="isDark" src="/favicon-dark.svg" class="logo vitesse" alt="Vitesse logo">
@@ -46,6 +46,11 @@ const mouse = useMouse({ eventFilter: debounceFilter(100) })
 
     <p class="mt-4 text-gray-400 text-xl">
       Click on logos to learn more
+    </p>
+    <p class="mt-4 text-gray-600 text-xl">
+      Custom svg icons:
+      <i-my-icons-vue class=" inline-block" />
+      <i-carbon-sun class=" inline-block animate-[spin_10s_ease-in-out_infinite]" />
     </p>
   </div>
 </template>
