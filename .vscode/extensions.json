@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "Vue.volar",
+    "Vue.vscode-typescript-vue-plugin",
+    "antfu.goto-alias",
+    "dbaeumer.vscode-eslint",
+    "antfu.iconify",
+    "bradlc.vscode-tailwindcss",
+    "csstools.postcss",
+    "EditorConfig.EditorConfig"
+  ]
+}
