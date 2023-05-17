@@ -1,15 +1,15 @@
 <script setup lang="ts">
 defineProps<{ msg: string }>()
 
-const count = ref(0)
+const counter = useCounterStore()
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
 
   <div class="card">
-    <button type="button" @click="count++">
-      count is {{ count }}
+    <button type="button" @click="counter.count++">
+      count is {{ counter.count }}
     </button>
     <button type="button" style="margin-left:2em;" @click="toggleDark()">
       {{ isDark }}
