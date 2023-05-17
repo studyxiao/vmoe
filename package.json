@@ -32,10 +32,10 @@
     "unplugin-auto-import": "^0.16.0",
     "unplugin-vue-components": "^0.24.1",
     "unplugin-vue-macros": "^2.1.7",
-    "vite": "^4.3.6",
+    "vite": "^4.3.7",
     "vite-plugin-pages": "^0.29.0",
     "vite-plugin-vue-layouts": "^0.8.0",
-    "vite-plugin-vue-markdown": "^0.23.4",
+    "vite-plugin-vue-markdown": "^0.23.5",
     "vite-plugin-webfont-dl": "^3.7.4",
     "vue-tsc": "^1.6.5"
   }
